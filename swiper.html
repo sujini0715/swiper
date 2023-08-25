@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>슬라이드 플러그인</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <style>
+        .swiper{
+            padding-bottom: 5rem;
+        }
+        .swiper-slide{
+            height: 500px;
+            background-color: #666;
+            border-radius: 3rem;
+        }
+        .swiper-pagination{
+            bottom: 2rem;
+
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>스와이퍼 슬라이드 다루기</h2>
+        <ol>
+            <li>https://swiperjs.com/get-started#use-swiper-from-cdn 접속</li>
+            <li>스타일링크과 스크립트 링크를 복붙한다. 8번, 9번줄</li>
+            <li>https://swiperjs.com/get-started#add-swiper-html-layout 
+                <p>html태그 를 복붙하고 주석정리한다.</p>
+            </li>
+            <li>https://swiperjs.com/get-started#initialize-swiper
+                <p>자바스크립트 실행문 복붙한다. 56번줄</p>
+            </li>
+            <li>
+                https://swiperjs.com/demos
+                <p>원하는 자바스크립트 옵션을 붙인다. 63번, 64번 등등</p>
+            </li>
+            <li>
+                스타일 커스터마이징 한다.
+            </li>
+        </ol>
+    </div>
+
+    <div class="swiper">    
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+        </div>
+
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>    
+        <script>
+            const swiper = new Swiper('.swiper', {
+                loop: true, 
+                slidesPerView: 1.8,
+                spaceBetween: 30,
+                centeredSlides: true,
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                el: ".swiper-pagination",
+                type: "fraction",
+            },              
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                });
+        </script>
+</body>
+</html>
